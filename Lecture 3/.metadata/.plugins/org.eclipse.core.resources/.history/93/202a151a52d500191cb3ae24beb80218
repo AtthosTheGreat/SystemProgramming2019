@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Main implements NetworkThread.NetworkInterfaceCallback
+{
+	public static void main(String args[])
+	{
+		NetworkThread nt = new NetworkThread();
+		nt.run();
+	}
+
+	@Override
+	public void sendResults(ArrayList<String> result)
+	{
+		
+	}
+}

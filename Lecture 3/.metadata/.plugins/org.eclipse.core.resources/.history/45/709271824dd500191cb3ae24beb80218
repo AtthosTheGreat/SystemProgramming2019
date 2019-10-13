@@ -1,0 +1,18 @@
+import java.net.URL;
+
+public class NetworkThread extends Thread
+{
+	@Override
+	public void run()
+	{
+		try
+		{
+			URL url = new URL("www.google.com");
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

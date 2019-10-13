@@ -1,0 +1,20 @@
+
+public class ProgressThread extends Thread
+{
+	public interface ProgressThreadCallBack
+	{
+		void progressPercentage(int progress);
+	}
+	
+	private ProgressThreadCallBack callback;
+	
+	public ProgressThread(ProgressThreadCallBack callback)
+	{
+		this.callback = callback;
+	}
+	
+	public void run()
+	{
+		callback.progressPercentage(0);
+	}
+}

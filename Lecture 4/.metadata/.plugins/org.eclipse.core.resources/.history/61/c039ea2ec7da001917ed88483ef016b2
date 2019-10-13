@@ -1,0 +1,13 @@
+
+public class ProgressThread extends Thread
+{
+	public interface ProgressThreadCallBack
+	{
+		void progressPercentage(int progress);
+	}
+	
+	public void run()
+	{
+		
+	}
+}

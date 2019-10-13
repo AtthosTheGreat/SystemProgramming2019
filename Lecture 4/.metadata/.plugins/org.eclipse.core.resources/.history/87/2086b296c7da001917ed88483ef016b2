@@ -1,0 +1,9 @@
+import ProgressThread.ProgressThreadCallBack;
+
+public class Main implements ProgressThreadCallBack
+{
+	public static void main(String args[])
+	{
+		
+	}
+}

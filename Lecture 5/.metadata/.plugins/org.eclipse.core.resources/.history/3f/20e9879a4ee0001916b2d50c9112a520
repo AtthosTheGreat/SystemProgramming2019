@@ -1,0 +1,12 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class Main
+{
+	private static String path = "txtfile.txt";
+	
+	public static void main(String argv[])
+	{
+		BufferedReader reader = new BufferedReader(new FileReader(path));
+	}
+}

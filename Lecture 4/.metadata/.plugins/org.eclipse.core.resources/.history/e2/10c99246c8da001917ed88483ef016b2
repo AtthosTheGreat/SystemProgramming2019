@@ -1,0 +1,20 @@
+public class Main implements ProgressThread.ProgressThreadCallBack
+{
+	public static void main(String args[])
+	{
+		ProgressThread thread = new ProgressThread(new Main());
+		thread.start();
+	}
+
+	@Override
+	public void progressPercentage(int progress)
+	{
+		System.out.println(LocalDateTime.now() + ". Progress: " + progress);
+	}
+
+	@Override
+	public void progressFinished()
+	{
+		System.out.println("Finished");
+	}
+}

@@ -1,0 +1,57 @@
+
+public class ProgressThread extends Thread
+{
+	public interface ProgressThreadCallBack
+	{
+		void progressPercentage(int progress);
+	}
+	
+	private ProgressThreadCallBack callback;
+	
+	public ProgressThread(ProgressThreadCallBack callback)
+	{
+		this.callback = callback;
+	}
+	
+	public void run()
+	{
+		try
+		{
+			callback.progressPercentage(0);
+			sleep(1000);
+
+			callback.progressPercentage(10);
+			sleep(1000);
+
+			callback.progressPercentage(20);
+			sleep(1000);
+
+			callback.progressPercentage(30);
+			sleep(1000);
+
+			callback.progressPercentage(40);
+			sleep(1000);
+
+			callback.progressPercentage(50);
+			sleep(1000);
+
+			callback.progressPercentage(60);
+			sleep(1000);
+
+			callback.progressPercentage(70);
+			sleep(1000);
+
+			callback.progressPercentage(80);
+			sleep(1000);
+
+			callback.progressPercentage(90);
+			sleep(1000);
+			
+			callback.progressFinished();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

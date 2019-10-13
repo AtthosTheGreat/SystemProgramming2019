@@ -1,0 +1,23 @@
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class NetworkThread extends Thread
+{
+	@Override
+	public void run()
+	{
+		try
+		{
+			URL url = new URL("www.google.com");
+			HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
+			
+			// httpConnection.connect();
+
+			System.out.println(httpConnection.getResponseCode());
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

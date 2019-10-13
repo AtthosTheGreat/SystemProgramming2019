@@ -1,0 +1,8 @@
+
+public class ProgressThread extends Thread
+{
+	public void run()
+	{
+		
+	}
+}

@@ -1,0 +1,29 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class NetworkThread extends Thread
+{
+	@Override
+	public void run()
+	{
+		try
+		{
+			URL url = new URL("http://oamk.fi/~vetapani/");
+			HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
+			
+			// httpConnection.connect();
+
+			BufferedReader reader = new BufferedReader(new InputStreamReader(httpConnection.getInputStream()));
+			String line = reader.readLine();
+			reader.close();
+			
+			System.out.println(line);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

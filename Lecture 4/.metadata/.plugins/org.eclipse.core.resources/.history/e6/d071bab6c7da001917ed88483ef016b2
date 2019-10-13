@@ -1,0 +1,19 @@
+public class Main implements ProgressThread.ProgressThreadCallBack
+{
+	public static void main(String args[])
+	{
+		
+	}
+
+	@Override
+	public void progressPercentage(int progress) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void progressFinished() {
+		// TODO Auto-generated method stub
+		
+	}
+}

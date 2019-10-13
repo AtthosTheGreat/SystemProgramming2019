@@ -1,0 +1,13 @@
+1. What is main (UI) thread, why it must be responsive?
+The UI thread handles events (including drawing events) so if it does something which takes a lot of time the application freezes.
+
+2. What is difference of process and thread?
+Everything a process has access to the same resources and memory. Two processes are independent of eachother but two threads share the same
+resources and memory. A process can have multiple threads running "inside" of it.
+
+3. Why Android system may stop processes suddenly?
+The system might be running out of memory so it kills some processes in order to free memory for more important processes.
+
+4. How lifecycle is handled on desktop Java app? How it differs from Android app lifecycle?
+A thread's life cycle stages (in order) are: New, Runnable, Waiting, Timed Waiting and Terminated.
+An activity's life cycle stages trigger the following methods: onCreate, onStart and onResume then onPause, onStop and onDestroy.

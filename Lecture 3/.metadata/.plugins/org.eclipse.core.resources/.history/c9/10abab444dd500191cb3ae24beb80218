@@ -1,0 +1,10 @@
+import java.net.URL;
+
+public class NetworkThread extends Thread
+{
+	@Override
+	public void run()
+	{
+		URL url = new URL("www.google.com");
+	}
+}
